@@ -1,22 +1,32 @@
-const Entry = () => {
+import locationPin from "../assets/images/location-pin.png";
+
+type EntryPropsType = {
+  img: string;
+  title: string;
+  dates: string;
+  text: string;
+  country: string;
+};
+
+const Entry = (props: EntryPropsType) => {
   return (
     <section className="flex items-center gap-x-6 border-b-2 border-gray-300 pb-8 ">
       <img
-        src="/src/assets/images/Rectangle-77.png"
+        src={props.img}
         alt="mount fuji"
-        className="w-[280px] h-[280px] col-span-2 "
+        className="w-[280px] h-[280px] col-span-2 shadow-sm "
       />
 
-      <div className=" w-full">
+      <div className="w-full">
         <div className="mt-2">
           <span className="flex items-center jusify-center">
             <img
-              src="/src/assets/images/location-pin.png"
+              src={locationPin}
               alt="location pin"
               className="h-4 mr-[6px]"
             />
             <p className="text-sm uppercase tracking-[0.3em] text-gray-700">
-              japan
+              {props.country}
             </p>
 
             <a
@@ -27,14 +37,12 @@ const Entry = () => {
             </a>
           </span>
         </div>
-        <h1 className="text-black font-semibold text-4xl mt-2">Mount Fuji</h1>
-        <p className="text-lg font-semibold trackin-wide mt-8">
-          12 Jan, 2021 - 24 Jan, 2021
-        </p>
+        <h1 className="text-black font-semibold text-4xl mt-2">
+          {props.title}
+        </h1>
+        <p className="text-lg font-semibold trackin-wide mt-8">{props.dates}</p>
         <p className="w-[80%] font-medium text-sm leading-5 tracking-wide text-slate-600">
-          Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters
-          (12,380 feet). Mount Fuji is the single most popular tourist site in
-          Japan, for both Japanese and foreign tourists.
+          {props.text}
         </p>
       </div>
     </section>

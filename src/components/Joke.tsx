@@ -8,7 +8,6 @@ type JokePropsType = {
 };
 
 const Joke = (props: JokePropsType) => {
-  console.log(props.comment);
   return (
     <div className="flex flex-col gap-1 ">
       {props.setup && (
