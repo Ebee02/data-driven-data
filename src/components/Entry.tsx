@@ -1,9 +1,13 @@
 import locationPin from "../assets/images/location-pin.png";
 
 type EntryPropsType = {
-  img: string;
+  img: {
+    src: string;
+    alt: string;
+  };
   title: string;
   dates: string;
+  googleMapsLink: string;
   text: string;
   country: string;
 };
@@ -12,8 +16,8 @@ const Entry = (props: EntryPropsType) => {
   return (
     <section className="flex items-center gap-x-6 border-b-2 border-gray-300 pb-8 ">
       <img
-        src={props.img}
-        alt="mount fuji"
+        src={props.img.src}
+        alt={props.img.alt}
         className="w-[280px] h-[280px] col-span-2 shadow-sm "
       />
 
@@ -30,8 +34,8 @@ const Entry = (props: EntryPropsType) => {
             </p>
 
             <a
-              href="#"
-              className="ml-5 text-sm text-gray-400 transition-all duration-300 hover:underline"
+              href={props.googleMapsLink}
+              className="ml-5 text-sm text-gray-400 font-medium transition-all duration-300 hover:underline"
             >
               View on Google Maps
             </a>
@@ -40,7 +44,7 @@ const Entry = (props: EntryPropsType) => {
         <h1 className="text-black font-semibold text-4xl mt-2">
           {props.title}
         </h1>
-        <p className="text-lg font-semibold trackin-wide mt-8">{props.dates}</p>
+        <p className="text-lg font-bold trackin-wide mt-8">{props.dates}</p>
         <p className="w-[80%] font-medium text-sm leading-5 tracking-wide text-slate-600">
           {props.text}
         </p>
