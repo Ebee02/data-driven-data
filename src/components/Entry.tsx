@@ -18,7 +18,7 @@ const Entry = (props: EntryPropsType) => {
       <img
         src={props.img.src}
         alt={props.img.alt}
-        className="w-[280px] h-[280px] col-span-2 shadow-sm "
+        className="w-[240px] h-[280px] col-span-2 shadow-sm rounded-lg"
       />
 
       <div className="w-full">

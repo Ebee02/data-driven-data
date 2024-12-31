@@ -27,7 +27,7 @@ const Joke = (props: JokePropsType) => {
           <p>Is it a pun: {props.isPun.toString()}</p>
         </div>
       )}
-      <hr className="border-2 border-gray-400" />
+      <hr className="border border-gray-400" />
     </div>
   );
 };
