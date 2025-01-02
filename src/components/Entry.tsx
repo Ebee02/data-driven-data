@@ -14,11 +14,11 @@ type EntryPropsType = {
 
 const Entry = (props: EntryPropsType) => {
   return (
-    <section className="flex items-center gap-x-6 border-b-2 border-gray-300 pb-8 ">
+    <section className="flex items-center gap-x-6 border-b-2 border-gray-300 pb-8">
       <img
         src={props.img.src}
         alt={props.img.alt}
-        className="w-[240px] h-[280px] col-span-2 shadow-sm rounded-lg"
+        className="w-[230px] h-[280px] col-span-2 shadow-sm rounded-lg"
       />
 
       <div className="w-full">

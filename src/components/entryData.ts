@@ -45,6 +45,6 @@ const entryData: entryDataType[] = [
     dates: "01 Oct, 2021 - 18 Nov, 2021",
     text: "The Geiranger Fjord is a fjord in the Sunnmøre region of Møre og Romsdal county, Norway. It is located entirely in the Stranda Municipality.",
   },
-];
+  ];
 
 export default entryData;
